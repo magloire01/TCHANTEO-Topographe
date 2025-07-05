@@ -1,11 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Ruler, Compass, Building, Landmark, Map, Phone, Mail, MapIcon } from "lucide-react";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { LanguageSelector } from "@/components/LanguageSelector";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-surveyor.jpg";
 import equipmentImage from "@/assets/surveying-equipment.jpg";
 import mapsImage from "@/assets/maps-plans.jpg";
 
 const Index = () => {
+  const { t } = useLanguage();
   const services = [
     {
       icon: Ruler,
@@ -55,16 +60,22 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <MapIcon className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold text-foreground">Expert Géomètre</span>
+            <span className="text-xl font-bold text-foreground">{t("site.title")}</span>
           </div>
           <nav className="hidden md:flex items-center gap-6">
-            <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">Services</a>
-            <a href="#expertise" className="text-muted-foreground hover:text-primary transition-colors">Expertise</a>
-            <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</a>
+            <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">{t("nav.services")}</a>
+            <a href="#expertise" className="text-muted-foreground hover:text-primary transition-colors">{t("nav.expertise")}</a>
+            <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">{t("nav.contact")}</a>
           </nav>
-          <Button variant="hero" size="sm">
-            Devis Gratuit
-          </Button>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <LanguageSelector />
+            <Link to="/devis">
+              <Button variant="hero" size="sm">
+                {t("button.quote")}
+              </Button>
+            </Link>
+          </div>
         </div>
       </header>
 
@@ -76,31 +87,38 @@ const Index = () => {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
-                  Géomètre-Topographe
-                  <span className="block text-primary">Professionnel</span>
+                  {t("hero.title")}
+                  <span className="block text-primary">{t("hero.subtitle")}</span>
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  Expertise technique et précision au service de vos projets d'aménagement, 
-                  construction et délimitation foncière.
+                  {t("hero.description")}
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="hero" size="lg">
-                  Découvrir nos Services
+                  {t("hero.cta1")}
                 </Button>
                 <Button variant="outline" size="lg">
                   <Phone className="h-4 w-4" />
-                  Nous Contacter
+                  {t("hero.cta2")}
                 </Button>
               </div>
             </div>
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl transform rotate-3" />
-              <img 
-                src={heroImage}
-                alt="Géomètre professionnel au travail"
-                className="relative rounded-2xl shadow-2xl w-full h-[400px] lg:h-[500px] object-cover"
-              />
+              <div className="relative">
+                <img 
+                  src={heroImage}
+                  alt="Géomètre professionnel au travail"
+                  className="rounded-2xl shadow-2xl w-full h-[400px] lg:h-[500px] object-cover"
+                />
+                <div className="absolute bottom-4 right-4 bg-background/90 backdrop-blur-sm px-4 py-2 rounded-lg border">
+                  <p className="text-lg font-bold text-primary bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    {t("surveyor.name")}
+                  </p>
+                  <p className="text-sm text-muted-foreground">Géomètre-Topographe Expert</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -111,10 +129,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Nos Services Professionnels
+              {t("services.title")}
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Une gamme complète de services topographiques pour répondre à tous vos besoins
+              {t("services.description")}
             </p>
           </div>
           
@@ -184,9 +202,11 @@ const Index = () => {
                 ))}
               </div>
               
-              <Button variant="hero" size="lg">
-                Demander un Devis
-              </Button>
+              <Link to="/devis">
+                <Button variant="hero" size="lg">
+                  Demander un Devis
+                </Button>
+              </Link>
             </div>
             
             <div className="relative">
@@ -265,10 +285,10 @@ const Index = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
               <MapIcon className="h-6 w-6 text-primary" />
-              <span className="font-semibold text-foreground">Expert Géomètre</span>
+              <span className="font-semibold text-foreground">{t("site.title")}</span>
             </div>
             <p className="text-muted-foreground text-center">
-              © 2024 Expert Géomètre. Tous droits réservés.
+              © 2024 {t("site.title")}. Tous droits réservés.
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
