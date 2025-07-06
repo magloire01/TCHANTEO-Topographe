@@ -6,7 +6,6 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
 import { ArrowLeft, Send } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -27,15 +26,35 @@ const Quote = () => {
     setIsLoading(true);
 
     try {
-      const { error } = await supabase.functions.invoke('send-quote-email', {
-        body: formData
-      });
+      // Créer le contenu de l'email
+      const emailSubject = `Nouvelle demande de devis - ${formData.name}`;
+      const emailBody = `
+Bonjour,
 
-      if (error) throw error;
+Nouvelle demande de devis reçue :
+
+Nom : ${formData.name}
+Email : ${formData.email}
+Téléphone : ${formData.phone}
+Type de projet : ${formData.projectType}
+Adresse : ${formData.address}
+
+Description du projet :
+${formData.description}
+
+Cordialement,
+Expert Topographe
+      `.trim();
+
+      // Créer le lien mailto
+      const mailtoLink = `mailto:magloire.tchanteo@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+
+      // Ouvrir le client email par défaut
+      window.open(mailtoLink, '_blank');
 
       toast({
-        title: "Demande envoyée !",
-        description: "Nous vous contacterons dans les plus brefs délais.",
+        title: "Email préparé !",
+        description: "Votre client email s'est ouvert. Veuillez vérifier et envoyer l'email.",
       });
 
       setFormData({

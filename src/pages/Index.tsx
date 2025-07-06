@@ -45,8 +45,8 @@ const Index = () => {
   ];
 
   const expertise = [
-    "Plus de 15 ans d'expérience en topographie",
-    "Équipements de mesure haute précision",
+    "Plus de 23 ans d'expérience en topographie",
+    "Équipements de mesure haute précision - E-survey,...",
     "Certifications professionnelles reconnues",
     "Intervention sur tout type de terrain",
     "Respect des délais et budgets",
@@ -95,10 +95,10 @@ const Index = () => {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="hero" size="lg">
+                <Button variant="hero" size="lg" onClick={() => window.location.href = '#services'}>
                   {t("hero.cta1")}
                 </Button>
-                <Button variant="outline" size="lg">
+                <Button variant="outline" size="lg"  onClick={() => window.location.href = '#contact'}>
                   <Phone className="h-4 w-4" />
                   {t("hero.cta2")}
                 </Button>
@@ -246,11 +246,13 @@ const Index = () => {
                   <p className="text-muted-foreground">
                     Appelez-nous pour un premier échange sur votre projet
                   </p>
-                  <p className="text-lg font-semibold text-foreground">
-                    +33 1 23 45 67 89
-                  </p>
+                    <a href="tel:+237696299406">
+                      <p className="text-lg font-semibold text-foreground">
+                        +237 6 96 29 94 06
+                      </p>
+                    </a>
                   <p className="text-sm text-muted-foreground">
-                    Lun - Ven : 8h30 - 18h00
+                    Lun - Dim : 7h00 - 21h00
                   </p>
                 </CardContent>
               </Card>
@@ -266,12 +268,16 @@ const Index = () => {
                   <p className="text-muted-foreground">
                     Envoyez-nous un message détaillé de votre demande
                   </p>
-                  <p className="text-lg font-semibold text-foreground">
-                    contact@geometre-expert.fr
-                  </p>
-                  <Button variant="accent" className="w-full">
-                    Envoyer un Message
-                  </Button>
+                  <a href="mailto:kamoherve@yahoo.fr" className="block">
+                    <p className="text-lg font-semibold text-foreground">
+                      kamoherve@yahoo.fr
+                    </p>
+                  </a>
+                  <a href="mailto:kamoherve@yahoo.fr" className="block">
+                    <Button variant="accent" className="w-full">
+                      Envoyer un Message
+                    </Button>
+                  </a>
                 </CardContent>
               </Card>
             </div>
@@ -288,7 +294,7 @@ const Index = () => {
               <span className="font-semibold text-foreground">{t("site.title")}</span>
             </div>
             <p className="text-muted-foreground text-center">
-              © 2024 {t("site.title")}. Tous droits réservés.
+              © 2025 {t("site.title")}. Tous droits réservés.
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
