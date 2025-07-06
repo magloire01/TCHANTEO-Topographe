@@ -47,7 +47,7 @@ Expert Topographe
       `.trim();
 
       // Créer le lien mailto
-      const mailtoLink = `mailto:magloire.tchanteo@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+      const mailtoLink = `mailto:kamoherve78@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
 
       // Ouvrir le client email par défaut
       window.open(mailtoLink, '_blank');
