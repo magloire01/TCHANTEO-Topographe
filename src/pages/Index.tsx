@@ -29,7 +29,7 @@ const Index = () => {
     },
     {
       icon: Building,
-      title: "Suivi de Chantiers",
+      title: "Construction de Batiments",
       description: "Accompagnement technique des projets de construction et contrôle d'implantation.",
     },
     {
@@ -88,7 +88,7 @@ const Index = () => {
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
                   {t("hero.title")}
-                  <span className="block text-primary">{t("hero.subtitle")}</span>
+                  <span className="text-primary">{t("hero.subtitle")}</span>
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed">
                   {t("hero.description")}
@@ -246,9 +246,9 @@ const Index = () => {
                   <p className="text-muted-foreground">
                     Appelez-nous pour un premier échange sur votre projet
                   </p>
-                    <a href="tel:+237696299406">
+                    <a href="tel:+237672967821">
                       <p className="text-lg font-semibold text-foreground">
-                        +237 6 96 29 94 06
+                        +237 6 72 96 78 21 / +237 6 96 29 94 06
                       </p>
                     </a>
                   <p className="text-sm text-muted-foreground">
@@ -268,12 +268,12 @@ const Index = () => {
                   <p className="text-muted-foreground">
                     Envoyez-nous un message détaillé de votre demande
                   </p>
-                  <a href="mailto:kamoherve@yahoo.fr" className="block">
+                  <a href="mailto:kamoherve@gmail.com" className="block">
                     <p className="text-lg font-semibold text-foreground">
-                      kamoherve@yahoo.fr
+                      kamoherve@gmail.com
                     </p>
                   </a>
-                  <a href="mailto:kamoherve@yahoo.fr" className="block">
+                  <a href="mailto:kamoherve@gmail.com" className="block">
                     <Button variant="accent" className="w-full">
                       Envoyer un Message
                     </Button>
