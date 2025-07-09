@@ -221,6 +221,94 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-20 bg-muted/20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              Témoignages Clients
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Ce que disent nos clients sur nos services de topographie
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="bg-card/80 backdrop-blur-sm border-0 shadow-lg">
+              <CardContent className="p-6">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <div key={i} className="w-4 h-4 bg-primary rounded-full" />
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground italic">
+                    "Service excellent et très professionnel. Les mesures étaient d'une précision remarquable pour notre projet de construction."
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                      <span className="text-primary font-semibold">MJ</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Marie Joséphine</p>
+                      <p className="text-sm text-muted-foreground">Architecte</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card/80 backdrop-blur-sm border-0 shadow-lg">
+              <CardContent className="p-6">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <div key={i} className="w-4 h-4 bg-primary rounded-full" />
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground italic">
+                    "Intervention rapide et efficace pour le bornage de notre terrain. Résultats clairs et documentation complète."
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                      <span className="text-primary font-semibold">PM</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Paul Martin</p>
+                      <p className="text-sm text-muted-foreground">Propriétaire Foncier</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card/80 backdrop-blur-sm border-0 shadow-lg">
+              <CardContent className="p-6">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <div key={i} className="w-4 h-4 bg-primary rounded-full" />
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground italic">
+                    "Expertise technique remarquable. Les plans fournis étaient parfaitement adaptés à nos besoins d'aménagement."
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                      <span className="text-primary font-semibold">AD</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Alain Dubois</p>
+                      <p className="text-sm text-muted-foreground">Promoteur Immobilier</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
         <div className="container mx-auto px-4">
