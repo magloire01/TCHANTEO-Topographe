@@ -10,7 +10,7 @@ interface LanguageContextType {
 
 const translations = {
   fr: {
-    "site.title": "Expert Topographe",
+    "site.title": "Genie Civil / Topographie",
     "nav.services": "Services",
     "nav.expertise": "Expertise",
     "nav.contact": "Contact",
@@ -25,7 +25,7 @@ const translations = {
     "surveyor.name": "TCHANTEO KAMO Hervé"
   },
   en: {
-    "site.title": "Expert Surveyor",
+    "site.title": "Genie Civil / Topographie",
     "nav.services": "Services",
     "nav.expertise": "Expertise",
     "nav.contact": "Contact",
@@ -40,7 +40,7 @@ const translations = {
     "surveyor.name": "TCHANTEO KAMO Hervé"
   },
   zh: {
-    "site.title": "专业测量师",
+    "site.title": "Genie Civil / Topographie",
     "nav.services": "服务",
     "nav.expertise": "专业知识",
     "nav.contact": "联系我们",
@@ -55,7 +55,7 @@ const translations = {
     "surveyor.name": "TCHANTEO KAMO Hervé"
   },
   es: {
-    "site.title": "Topógrafo Experto",
+    "site.title": "Genie Civil / Topographie",
     "nav.services": "Servicios",
     "nav.expertise": "Experiencia",
     "nav.contact": "Contacto",
